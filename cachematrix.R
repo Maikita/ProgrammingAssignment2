@@ -19,8 +19,8 @@ cacheSolve <- function(x, ...) {
     message("getting cached data")
     return(inv)
   }
-  data <- x$get() # Call the function to get the value of the matrix and assign it
-  inv <- solve(data, ...) # Get the inverse of the matrix
+  matrix <- x$get() # Call the function to get the value of the matrix and assign it
+  inv <- solve(matrix, ...) # Get the inverse of the matrix
   x$setInv(inv) # Call the function to put the result in cache
   inv #Print result
 }
